@@ -1,0 +1,614 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>mtCollectFiles</class>
+ <widget class="QWidget" name="mtCollectFiles">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1064</width>
+    <height>589</height>
+   </rect>
+  </property>
+  <property name="font">
+   <font>
+    <family>Calibri</family>
+    <pointsize>10</pointsize>
+    <weight>75</weight>
+    <bold>true</bold>
+   </font>
+  </property>
+  <property name="cursor">
+   <cursorShape>ArrowCursor</cursorShape>
+  </property>
+  <property name="windowTitle">
+   <string>mtCollectFiles</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QWidget{
+   background-color: rgb(19, 19, 19);
+	color: rgb(235, 235, 235);
+	border-color: rgb(255, 85, 0);
+
+}
+
+QPushButton{
+background-color: rgb(116, 127, 144);
+	color: rgb(230, 230, 230);
+}
+
+QPushButton:hover{
+background-color: rgb(216, 174, 6);
+
+}
+
+QLineEdit{
+background-color: rgb(42, 42, 42);
+
+}</string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout_2" stretch="0">
+   <item>
+    <layout class="QVBoxLayout" name="verticalLayout" stretch="1,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,2">
+     <item>
+      <layout class="QHBoxLayout" name="horizontalLayout_2">
+       <item>
+        <widget class="QLabel" name="lblFolder01">
+         <property name="minimumSize">
+          <size>
+           <width>80</width>
+           <height>0</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>80</width>
+           <height>16777215</height>
+          </size>
+         </property>
+         <property name="text">
+          <string>Path:</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="lnlDestination">
+         <property name="toolTip">
+          <string>Path where the collected script will be stored</string>
+         </property>
+         <property name="text">
+          <string>C:/Folder</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QToolButton" name="btnSelectFolder">
+         <property name="enabled">
+          <bool>true</bool>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>150</width>
+           <height>16777215</height>
+          </size>
+         </property>
+         <property name="font">
+          <font>
+           <pointsize>-1</pointsize>
+           <weight>75</weight>
+           <italic>false</italic>
+           <bold>true</bold>
+          </font>
+         </property>
+         <property name="toolTip">
+          <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:18pt;&quot;&gt;Selected the folder where you want to store the collected Script. Collect Files creates a subfolder automatically inside the selected folder.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QToolButton
+{
+
+	background-color: rgb(0, 97, 0);
+   font: bold 16px;
+
+
+
+}
+QToolButton:hover
+{
+	background-color: rgb(43, 131, 168);
+
+}
+
+QToolButton:pressed
+{  
+	background-color: rgba(0, 120, 252, 150);
+
+
+}
+
+</string>
+         </property>
+         <property name="text">
+          <string>Select Path</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+     <item>
+      <spacer name="verticalSpacer_7">
+       <property name="orientation">
+        <enum>Qt::Vertical</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>13</width>
+         <height>13</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+     <item>
+      <layout class="QHBoxLayout" name="horizontalLayout_5">
+       <item>
+        <widget class="QLabel" name="lblFolderName">
+         <property name="minimumSize">
+          <size>
+           <width>80</width>
+           <height>0</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>80</width>
+           <height>16777215</height>
+          </size>
+         </property>
+         <property name="toolTip">
+          <string>Write a name for the subfolder that will contain all the elements.</string>
+         </property>
+         <property name="text">
+          <string>Folder Name:</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLineEdit" name="lineEditFolderName">
+         <property name="toolTip">
+          <string>Write a name for the subfolder that will contain all the elements.</string>
+         </property>
+         <property name="frame">
+          <bool>false</bool>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+     <item>
+      <layout class="QHBoxLayout" name="horizontalLayout_7">
+       <property name="bottomMargin">
+        <number>0</number>
+       </property>
+       <item>
+        <widget class="QLabel" name="lblScriptName">
+         <property name="minimumSize">
+          <size>
+           <width>80</width>
+           <height>0</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>80</width>
+           <height>16777215</height>
+          </size>
+         </property>
+         <property name="toolTip">
+          <string>Specify your new script name. Do not forget to put &quot;.nk&quot; at the end!</string>
+         </property>
+         <property name="text">
+          <string>Script Name:</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLineEdit" name="lineEditScriptName">
+         <property name="toolTip">
+          <string>Specify your new script name. Do not forget to put &quot;.nk&quot; at the end!</string>
+         </property>
+         <property name="frame">
+          <bool>false</bool>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+     <item>
+      <spacer name="verticalSpacer_5">
+       <property name="orientation">
+        <enum>Qt::Vertical</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>13</width>
+         <height>13</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+     <item>
+      <widget class="Line" name="line">
+       <property name="frameShadow">
+        <enum>QFrame::Raised</enum>
+       </property>
+       <property name="lineWidth">
+        <number>2</number>
+       </property>
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <spacer name="verticalSpacer_4">
+       <property name="orientation">
+        <enum>Qt::Vertical</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>13</width>
+         <height>13</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+     <item>
+      <widget class="QCheckBox" name="cbCreateGeoFolder">
+       <property name="toolTip">
+        <string>Activate to also copy all the ReadGeos and Cameras.</string>
+       </property>
+       <property name="text">
+        <string>Copy Geo Files</string>
+       </property>
+       <property name="checked">
+        <bool>true</bool>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <spacer name="verticalSpacer_6">
+       <property name="orientation">
+        <enum>Qt::Vertical</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>13</width>
+         <height>13</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+     <item>
+      <layout class="QHBoxLayout" name="horizontalLayout_3">
+       <item>
+        <widget class="QLabel" name="lblExcludeReads">
+         <property name="minimumSize">
+          <size>
+           <width>105</width>
+           <height>0</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>105</width>
+           <height>16777215</height>
+          </size>
+         </property>
+         <property name="toolTip">
+          <string>If there are any reads you dont want to copy, write them here separated by a coma and a space: &quot;Read1, Read5&quot;</string>
+         </property>
+         <property name="text">
+          <string>Reads to Exclude:</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLineEdit" name="lineEditExcludeReads">
+         <property name="toolTip">
+          <string>If there are any reads you dont want to copy, write them here separated by a coma and a space: &quot;Read1, Read5&quot;</string>
+         </property>
+         <property name="frame">
+          <bool>false</bool>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+     <item>
+      <layout class="QHBoxLayout" name="horizontalLayout_4">
+       <item>
+        <widget class="QLabel" name="lblExcludeGeo">
+         <property name="minimumSize">
+          <size>
+           <width>105</width>
+           <height>0</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>105</width>
+           <height>16777215</height>
+          </size>
+         </property>
+         <property name="toolTip">
+          <string>If there are any Geo you dont want to copy, write them here separated by a coma and a space: &quot;ReadGeo1, Camera5&quot;</string>
+         </property>
+         <property name="text">
+          <string>Geo to Exclude:</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLineEdit" name="lineEditExcludeGeo">
+         <property name="toolTip">
+          <string>If there are any Geo you dont want to copy, write them here separated by a coma and a space: &quot;ReadGeo1, Camera5&quot;</string>
+         </property>
+         <property name="frame">
+          <bool>false</bool>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+     <item>
+      <spacer name="verticalSpacer">
+       <property name="orientation">
+        <enum>Qt::Vertical</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>13</width>
+         <height>13</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+     <item>
+      <widget class="Line" name="line_3">
+       <property name="frameShadow">
+        <enum>QFrame::Raised</enum>
+       </property>
+       <property name="lineWidth">
+        <number>2</number>
+       </property>
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <spacer name="verticalSpacer_2">
+       <property name="orientation">
+        <enum>Qt::Vertical</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>13</width>
+         <height>13</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+     <item>
+      <layout class="QHBoxLayout" name="horizontalLayout_6">
+       <item>
+        <widget class="QCheckBox" name="cbRemoveNotCopiead">
+         <property name="toolTip">
+          <string>Remove from the script all the Excluded Reads or Geos.</string>
+         </property>
+         <property name="text">
+          <string>Remove Not Copied Reads</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QCheckBox" name="cbRemoveSolitary">
+         <property name="toolTip">
+          <string>Check this option to remove all the reads that does not havy any other node connected. Be careful with this option!</string>
+         </property>
+         <property name="text">
+          <string>Remove Solitary Reads</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="Line" name="line_5">
+         <property name="orientation">
+          <enum>Qt::Vertical</enum>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QCheckBox" name="cbOpenFolder">
+         <property name="text">
+          <string>Open container folder at the end</string>
+         </property>
+         <property name="checked">
+          <bool>true</bool>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+     <item>
+      <spacer name="verticalSpacer_3">
+       <property name="orientation">
+        <enum>Qt::Vertical</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>13</width>
+         <height>13</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+     <item>
+      <widget class="Line" name="line_2">
+       <property name="frameShadow">
+        <enum>QFrame::Raised</enum>
+       </property>
+       <property name="lineWidth">
+        <number>5</number>
+       </property>
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <layout class="QVBoxLayout" name="verticalLayout_4">
+       <item>
+        <layout class="QHBoxLayout" name="horizontalLayout">
+         <property name="spacing">
+          <number>5</number>
+         </property>
+         <property name="bottomMargin">
+          <number>0</number>
+         </property>
+         <item>
+          <widget class="QPushButton" name="btnCollectFiles">
+           <property name="minimumSize">
+            <size>
+             <width>650</width>
+             <height>40</height>
+            </size>
+           </property>
+           <property name="font">
+            <font>
+             <pointsize>-1</pointsize>
+             <weight>75</weight>
+             <italic>false</italic>
+             <bold>true</bold>
+             <strikeout>false</strikeout>
+             <kerning>true</kerning>
+            </font>
+           </property>
+           <property name="toolTip">
+            <string>Press to start collecting your files!</string>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">QPushButton
+{
+
+	
+	
+	background-color: rgb(54, 54, 54);
+    font: bold 20px;
+
+	border:0px solid rgb(0,175,252);
+
+}
+QPushButton:hover
+{
+	
+	background-color: rgb(0, 94, 0);
+
+}
+
+QPushButton:pressed
+{  
+	background-color: rgba(0, 120, 252, 150);
+
+
+}
+
+</string>
+           </property>
+           <property name="text">
+            <string>COLLECT FILES</string>
+           </property>
+           <property name="autoDefault">
+            <bool>false</bool>
+           </property>
+           <property name="default">
+            <bool>false</bool>
+           </property>
+           <property name="flat">
+            <bool>false</bool>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="Line" name="line_4">
+           <property name="orientation">
+            <enum>Qt::Vertical</enum>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <layout class="QVBoxLayout" name="verticalLayout_3">
+           <property name="spacing">
+            <number>0</number>
+           </property>
+           <item>
+            <widget class="QPushButton" name="btnWEB">
+             <property name="maximumSize">
+              <size>
+               <width>18</width>
+               <height>14</height>
+              </size>
+             </property>
+             <property name="font">
+              <font>
+               <pointsize>5</pointsize>
+              </font>
+             </property>
+             <property name="toolTip">
+              <string>Opens Miguel Torija Website</string>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">background-color: rgb(60, 60, 60);</string>
+             </property>
+             <property name="text">
+              <string>web</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QPushButton" name="btnInfo">
+             <property name="maximumSize">
+              <size>
+               <width>18</width>
+               <height>14</height>
+              </size>
+             </property>
+             <property name="font">
+              <font>
+               <pointsize>5</pointsize>
+              </font>
+             </property>
+             <property name="toolTip">
+              <string>Open guide</string>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">background-color: rgb(60, 60, 60);</string>
+             </property>
+             <property name="text">
+              <string>?</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </item>
+        </layout>
+       </item>
+      </layout>
+     </item>
+    </layout>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
