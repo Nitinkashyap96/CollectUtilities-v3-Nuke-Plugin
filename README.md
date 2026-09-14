@@ -7,7 +7,7 @@ A small toolkit of Nuke (VFX compositing software) utility scripts for managing 
 - **Release date:** Jan 21, 2026
 - **Host application:** Autodesk / Foundry **Nuke** (tested with PySide2, with PySide6 fallback)
 
-![CollectUtilities](CollectUtilities.png)
+<img src="https://github.com/Nitinkashyap96/CollectUtilities_v3/blob/main/icon_mtCollectUtilities_v03.png?raw=true" alt="Collect Utilities Icon" width="54" />
 
 ---
 
