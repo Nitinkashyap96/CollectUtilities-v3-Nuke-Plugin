@@ -82,7 +82,7 @@ CollectUtilities_v3/
    ```
 
 3. **Register the plugin path.**
-   Open (or create) `~/.nuke/menu.py` and add):
+   Open (or create) `~/.nuke/init.py` and add):
    ```python
    nuke.pluginAddPath("./CollectUtilities_v3")
    ```
