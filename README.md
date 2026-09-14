@@ -1,4 +1,4 @@
-# mt Collect Utilities (v3)
+# CollectUtilities v3 (Nuke Plugin)  
 
 A small toolkit of Nuke (VFX compositing software) utility scripts for managing **Read** node footage: checking for missing frames, collecting/copying files used in a script, renaming sequences, and moving files into organized folders — all from a menu inside Nuke.
 
